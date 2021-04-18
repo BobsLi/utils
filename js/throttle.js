@@ -1,3 +1,10 @@
+/**
+ * 节流函数
+ * @param {function} func 回调函数，即需要防抖的执行函数
+ * @param {number} wait 延迟执行函数的时间间隔
+ * @param {*} options { leading: false, 如果设置为false，则禁用首次调用； trailing: false, 如果设置为false，则禁止最后一次调用 }
+ * @returns { function } 返回客户调用的函数
+ */
 function throttle(func, wait, options) {
   let context, args, result
   let timer = null
