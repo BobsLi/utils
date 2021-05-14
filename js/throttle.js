@@ -1,5 +1,17 @@
+function throttle1(fn, delay = 500) {
+  let timer // 定时器id
+  let lastTime = Date.now() // 上次进来的时间
+  return function(...args) {
+    const nowTime = Date().now()
+    if (nowTime - oldTime >= delay) {
+      fn.apply(this, )
+    }
+  }
+}
+
+
 /**
- * 节流函数
+ * 节流函数(underscore版)
  * @param {function} func 回调函数，即需要防抖的执行函数
  * @param {number} wait 延迟执行函数的时间间隔
  * @param {*} options { leading: false, 如果设置为false，则禁用首次调用； trailing: false, 如果设置为false，则禁止最后一次调用 }
